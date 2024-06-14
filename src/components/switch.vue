@@ -1,16 +1,11 @@
 <template>
-    <label class="miao-switch" :class="{'is-checked': value}" @click="handleClick">
-<input 
-class="miao-switch_input"
-type="checkbox"
-:name="name"
-
->
-
+    <div class="miao-switch" :class="{'is-checked': value}" @click="handleClick">
         <span class="miao-switch_core" ref="core">
             <span class="miao-switch_button"></span>
         </span>
-    </label>
+        <!-- 外面的大框架如果用label会触发两次，抵消了 -->
+        <input class="miao-switch_input" type="checkbox" :name="name" ref="input">
+    </div>
 </template>
 
 <script>
@@ -44,6 +39,7 @@ export default {
             //数据修改后等待dom更新再修改按钮颜色
          await this.$nextTick()
          this.setColor()
+            this.$refs.input.checked = this.value
 
         },
         setColor() {
@@ -59,6 +55,11 @@ export default {
     },
     mounted(){
         this.setColor()
+        //控制checkbox的值
+        this.$refs.input.checked=this.value
+        //input值和value同步
+
+
     }
 
    

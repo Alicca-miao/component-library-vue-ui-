@@ -7,7 +7,7 @@
     <!-- <miao-input placeholder="请输入用户名" type="password" v-model="username" show-password></miao-input>
     <miao-input placeholder="请输入用户名" type="password" v-model="username"></miao-input> -->
 
-    <miao-switch v-model="active"></miao-switch>
+    <!-- <miao-switch v-model="active"></miao-switch> -->
     <miao-switch v-model="active" active-color="red" inactive-color="green" name="username"></miao-switch>
   </div>
 
