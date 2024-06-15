@@ -1,3 +1,13 @@
+Specific steps to build this component library please visit my blogs:
+https://blog.csdn.net/alicca/article/details/139524934?spm=1001.2014.3001.5501
+
+
+
+
+
+
+
+
 # mia
 
 ## Project setup
